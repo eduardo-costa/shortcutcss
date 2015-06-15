@@ -1,0 +1,153 @@
+@import "variables";
+@import "mixins";
+/**
+Shortcut classes.
+//*/
+
+.abs { position: absolute; }
+.rel { position: relative; }
+.fix { position: fixed; }
+
+
+.scroll   { overflow:   auto; }
+.scroll-x { overflow-x: auto; overflow-y: hidden; }
+.scroll-y { overflow-y: auto; overflow-x: hidden; }
+
+.tl { text-align: left;   }
+.tc { text-align: center; }
+.tr { text-align: right;  }
+
+.t-wrap   { white-space: normal; }
+.t-nowrap { white-space: nowrap; }
+
+.inh  { display: inherit; }
+.ib   { display: inline-block; }
+.bl   { display: block; }
+.none { display: none; }
+
+.fll { float: left;  }
+.flr { float: right; }
+
+@for $i from 1 through 48  { $v: 4 + ($i*2); .fs#{$v} { font-size: #{$v}px; } }
+@for $i from 1 through 200 { $v: ($i*0.02); .fsr#{$v*100} { font-size: #{$v}rem; } }
+@for $i from 1 through 200 { $v: ($i*0.02); .fse#{$v*100} { font-size: #{$v}em; } }
+
+@for $i from 0 through 64  { $v: ($i*2); .w#{$v} { width: #{$v}px; } }
+@for $i from 0 through 64  { $v: ($i*2); .h#{$v} { width: #{$v}px; } }
+@for $i from 0 through 64  { $v: ($i*2); .wh#{$v} { width: #{$v}px; height: #{$v}px; } }
+
+@for $i from 0 through 20  { $v: ($i*5); .w#{$v}p { width: #{$v}%; } }
+@for $i from 0 through 20  { $v: ($i*5); .h#{$v}p { width: #{$v}%; } }
+@for $i from 0 through 20  { $v: ($i*5); .wh#{$v}p { width: #{$v}%; height: #{$v}%; } }
+
+@for $i from 0 through 20  { $v: ($i*5); .vw#{$v} { width: #{$v}vw; } }
+@for $i from 0 through 20  { $v: ($i*5); .vh#{$v} { width: #{$v}vh; } }
+@for $i from 0 through 20  { $v: ($i*5); .vwh#{$v} { width: #{$v}vw%; height: #{$v}vh; } }
+
+@for $i from 0 through 80  { $v: ($i*0.05); .w#{$v*100}r { width: #{$v}rem; } }
+@for $i from 0 through 80  { $v: ($i*0.05); .h#{$v*100}r { width: #{$v}rem; } }
+@for $i from 0 through 80  { $v: ($i*0.05); .wh#{$v*100}r { width: #{$v}rem; height: #{$v}rem; } }
+
+@for $i from 0 through 80  { $v: ($i*0.05); .w#{$v*100}e { width: #{$v}em; } }
+@for $i from 0 through 80  { $v: ($i*0.05); .h#{$v*100}e { width: #{$v}em; } }
+@for $i from 0 through 80  { $v: ($i*0.05); .wh#{$v*100}e { width: #{$v}em; height: #{$v}em; } }
+
+.visible	{ visibility: visible; }
+.hidden 	{ visibility: hidden; }
+
+.opacity0   { opacity: 0.0; }
+.opacity1   { opacity: 1.0; }
+
+$twd: if(variable-exists("tw-duration"),$tw-duration,0.8s);
+
+.tw-opacity   { transition: opacity $twd ease-out; }
+.tw-position  { transition: left $twd ease-out, right $twd ease-out; }
+.tw-size      { transition: width $twd ease-out, height $twd ease-out; }
+.tw-transform { transition: transform $twd ease-out; }
+.tw-shadow    { transition: box-shadow $twd ease-out; }
+.tw-all       { transition: all $twd ease-out; }
+
+$twd: if(variable-exists("tw-fast"),  $tw-fast,0.25s);  .tw-fast     { transition-duration: $twd !important; }
+$twd: if(variable-exists("tw-normal"),$tw-normal,0.4s); .tw-normal   { transition-duration: $twd !important; }
+$twd: if(variable-exists("tw-slow"),  $tw-slow,0.6s);   .tw-slow     { transition-duration: $twd !important; }
+
+@for $i from 1 through 20 { .pd#{$i} { padding: #{$i}px; } }
+@for $i from 1 through 20 { .pdl#{$i} { padding-left: #{$i}px; } }
+@for $i from 1 through 20 { .pdr#{$i} { padding-right: #{$i}px; } }
+@for $i from 1 through 20 { .pdt#{$i} { padding-top: #{$i}px; } }
+@for $i from 1 through 20 { .pdb#{$i} { padding-bottom: #{$i}px; } }
+@for $i from 1 through 20 { .pdh#{$i} { padding-left: #{$i}px; padding-right: #{$i}px; } }
+@for $i from 1 through 20 { .pdv#{$i} { padding-top: #{$i}px;  padding-bottom: #{$i}px; } }
+
+@for $i from 1 through 20 { .m#{$i}   { margin: #{$i}px; } }
+@for $i from 1 through 20 { .ml#{$i}  { margin-left: #{$i}px; } }
+@for $i from 1 through 20 { .mr#{$i}  { margin-right: #{$i}px; } }
+@for $i from 1 through 20 { .mt#{$i}  { margin-top: #{$i}px; } }
+@for $i from 1 through 20 { .mb#{$i}  { margin-bottom: #{$i}px; } }
+@for $i from 1 through 20 { .mh#{$i}  { margin-left: #{$i}px; margin-right: #{$i}px; } }
+@for $i from 1 through 20 { .mv#{$i}  { margin-top: #{$i}px; margin-bottom: #{$i}px; } }
+
+
+/**
+Flex Layout
+//*/
+.lh
+{	
+	@include flexbox();	
+	@include flex-direction(row);
+	@include flex-shrink(0);
+	@include flex-grow(0);
+	@include align-content(flex-start);			
+}
+
+.lv
+{	
+	@include flexbox();	
+	@include flex-direction(column);
+	@include flex-shrink(0);	
+	@include flex-grow(0);
+	@include align-content(flex-start);		
+}
+	
+	
+
+@mixin layout-vertical-expand($s) 	{ @extend .lv; @include flex-grow($s); @include flex-shrink(1); }
+@mixin layout-horizontal-expand($s) { @extend .lh; @include flex-grow($s); @include flex-shrink(1); }
+@mixin layout-vertical-space($s) 	{ @extend .lh; height: $layout-space-size*$s; min-height:$layout-space-size*$s; @include flex-shrink(0); }
+@mixin layout-horizontal-space($s) 	{ @extend .lv; width: $layout-space-size*$s;  @include flex-shrink(0); }
+
+
+
+.hsp  { @include layout-horizontal-space(1.0); }
+.hsp2 { @include layout-horizontal-space(2.0); }
+.hsp3 { @include layout-horizontal-space(3.0); }
+.hsp4 { @include layout-horizontal-space(4.0); }
+
+.hx  { @include layout-horizontal-expand(1); }
+.hx2 { @include layout-horizontal-expand(2); }
+.hx3 { @include layout-horizontal-expand(3); }
+.hx4 { @include layout-horizontal-expand(4); }
+.hx5 { @include layout-horizontal-expand(5); }
+
+.vsp  { @include layout-vertical-space(1.0); }
+.vsp2 { @include layout-vertical-space(2.0); }
+.vsp3 { @include layout-vertical-space(3.0); }
+.vsp4 { @include layout-vertical-space(4.0); }
+
+.vx  { @include layout-vertical-expand(1); }
+.vx2 { @include layout-vertical-expand(2); }
+.vx3 { @include layout-vertical-expand(3); }
+.vx4 { @include layout-vertical-expand(4); }
+.vx5 { @include layout-vertical-expand(5); }
+
+@for $i from 1 through 10 { .fg#{$i} { @include flex-grow($i); } }
+
+.ltl  { @include justify-content(flex-start); 	@include align-items(flex-start); }
+.ltc  { @include justify-content(flex-start); 	@include align-items(center); }
+.ltr  { @include justify-content(flex-start); 	@include align-items(flex-end); }
+.ll   { @include justify-content(center); 		@include align-items(flex-start); }
+.lc   { @include justify-content(center); 		@include align-items(center); }
+.lr   { @include justify-content(center); 		@include align-items(flex-end); }
+.lbl  { @include justify-content(flex-end); 	@include align-items(flex-start); }
+.lbc  { @include justify-content(flex-end); 	@include align-items(center); }
+.lbr  { @include justify-content(flex-end); 	@include align-items(flex-end); }

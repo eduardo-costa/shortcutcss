@@ -1,0 +1,20 @@
+/**
+Colors
+//*/
+$prefixes: (bk,t,b,o);
+$attribs:  (background-color,color,border-color,outline-color);
+@for $j from 1 through length($prefixes)
+{ 
+	$pf: nth($prefixes,$j);
+	$at: nth($attribs,$j);
+	@for $i from 0 through 19 { $v: $i*5; $c: floor($i*0.05*255); $lb: zero-empty($v); .#{$pf}-red#{$lb}     { #{$at}: rgba(255,$c,$c,1.0);   } }
+	@for $i from 0 through 19 { $v: $i*5; $c: floor($i*0.05*255); $lb: zero-empty($v); .#{$pf}-green#{$lb}   { #{$at}: rgba($c,255,$c,1.0);   } }
+	@for $i from 0 through 19 { $v: $i*5; $c: floor($i*0.05*255); $lb: zero-empty($v); .#{$pf}-blue#{$lb}    { #{$at}: rgba($c,$c,255,1.0);   } }
+	@for $i from 0 through 19 { $v: $i*5; $c: floor($i*0.05*255); $lb: zero-empty($v); .#{$pf}-yellow#{$lb}  { #{$at}: rgba(255,255,$c,1.0);   } }
+	@for $i from 0 through 19 { $v: $i*5; $c: floor($i*0.05*255); $lb: zero-empty($v); .#{$pf}-cyan#{$lb}    { #{$at}: rgba(255,$c,$c,1.0);   } }
+	@for $i from 0 through 19 { $v: $i*5; $c: floor($i*0.05*255); $lb: zero-empty($v); .#{$pf}-magenta#{$lb} { #{$at}: rgba($c,255,$c,1.0);   } }	
+	@for $i from 0 through 19 { $v: $i*5; $c: floor($i*0.05*255); $lb: zero-empty($v); .#{$pf}-gray#{$lb} 	{ #{$at}: rgba($c,$c,$c,1.0);   } }	
+	.#{$pf}-white { #{$at}: rgba(255,255,255,1.0);   }
+	.#{$pf}-black { #{$at}: rgba(0,0,0,1.0);   }
+	.#{$pf}-clear { #{$at}: rgba(0,0,0,0);   }
+}

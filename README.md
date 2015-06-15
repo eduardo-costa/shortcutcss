@@ -14,26 +14,27 @@ Include ShortcutCSS
 ```
 
 Change your HTML from this:	
-```
+```html
 <style>
 	.container
 	{
 		position: relative;
 		text-align: center;
 		width: 100%;			
+		background-color: rgba(255,229,229,1.0);
 	}
-
+	
 	.centered
 	{
 		position: relative;
 		display: inline-block;
 	}
-
+	
 	.title
-	{		
-		font-family: sans-serif;
+	{	
 		font-size: 20px;
-	}		
+		color: rgba(255,76,76,1.0);
+	}			
 </style>
 
 <div class="container">
@@ -45,7 +46,7 @@ Change your HTML from this:
 
 to this:
 	
-```
+```html
 <style>	
 	.title
 	{		
@@ -53,9 +54,9 @@ to this:
 	}		
 </style>
 
-<div class="rel tc fw">
+<div class="rel tc bk-red90 fw">
 	<div class="ib rel">
-		<span class="title fs20">Centered Text</span>
+		<span class="title fs20 t-red30">Centered Text</span>
 	</div>
 </div>
 ```
