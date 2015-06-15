@@ -1,8 +1,12 @@
-/**
-Variables
+/**
+
+Variables
+
 //*/
-/**
-Shortcut classes.
+/**
+
+Shortcut classes.
+
 //*/
 .abs {
   position: absolute; }
@@ -33,16 +37,10 @@ Shortcut classes.
   width: 100vw;
   height: 100vh; }
 
-.width0px {
-  width: 0px; }
-
-.height0px {
-  height: 0px; }
-
-.width0pc {
+.width0 {
   width: 0%; }
 
-.height0pc {
+.height0 {
   height: 0%; }
 
 .scroll {
