@@ -9,8 +9,11 @@ Replace styling for dummy Elements used for layout purposes and reduce your CSS 
 Use its features when it is certain the Element styling will be always the same.
 
 Include ShortcutCSS
-```
+```html
 <link rel="stylesheet" href="css/shortcutcss.css">
+```
+```html
+<link rel="stylesheet" href="css/shortcutcss.min.css">
 ```
 
 Change your HTML from this:	
