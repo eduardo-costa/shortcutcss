@@ -42,7 +42,7 @@ Shortcut classes.
 
 @for $i from 0 through 20  { $v: ($i*5); .vw#{$v} { width: #{$v}vw; } }
 @for $i from 0 through 20  { $v: ($i*5); .vh#{$v} { width: #{$v}vh; } }
-@for $i from 0 through 20  { $v: ($i*5); .vwh#{$v} { width: #{$v}vw%; height: #{$v}vh; } }
+@for $i from 0 through 20  { $v: ($i*5); .vwh#{$v} { width: #{$v}vw; height: #{$v}vh; } }
 
 @for $i from 0 through 80  { $v: ($i*0.05); .w#{$v*100}r { width: #{$v}rem; } }
 @for $i from 0 through 80  { $v: ($i*0.05); .h#{$v*100}r { width: #{$v}rem; } }
