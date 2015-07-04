@@ -2,13 +2,13 @@
 
 Minimalist CSS classes for styling speedup.
 
-
-## Usage
+## Install
 
 Replace styling for dummy Elements used for layout purposes and reduce your CSS complexity and size.
 Use its features when it is certain the Element styling will be always the same.
 
-Include ShortcutCSS
+### Local
+
 ```html
 <!-- complete -->
 <link rel="stylesheet" href="css/shortcutcss.css">
@@ -22,7 +22,8 @@ Include ShortcutCSS
 
 ### CDN
 
-A CDN link is also available.
+A CDN link is also available.  
+
 ```html
 <link rel="stylesheet" href="http://cdn.thelaborat.org/shortcutcss/shortcutcss.css">
 <link rel="stylesheet" href="http://cdn.thelaborat.org/shortcutcss/shortcutcss-no-color.css">
@@ -30,7 +31,16 @@ A CDN link is also available.
 <link rel="stylesheet" href="http://cdn.thelaborat.org/shortcutcss/shortcutcss-no-color.min.css">
 ```
 
-Change your HTML from this:	
+### Custom Version
+
+The CDN also offers a specific version if needed.  
+```html
+<link rel="stylesheet" href="http://cdn.thelaborat.org/shortcutcss/0.3.2/shortcutcss.css">
+```  
+## Usage 
+
+Check the minimalistic rules and change your HTML from this:	
+
 ```html
 <style>
 	.container
