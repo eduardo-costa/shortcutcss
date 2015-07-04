@@ -10,10 +10,24 @@ Use its features when it is certain the Element styling will be always the same.
 
 Include ShortcutCSS
 ```html
+<!-- complete -->
 <link rel="stylesheet" href="css/shortcutcss.css">
-```
-```html
+<!-- no color rules (smaller) -->
+<link rel="stylesheet" href="css/shortcutcss-no-color.css">
+
+<!-- minified -->
 <link rel="stylesheet" href="css/shortcutcss.min.css">
+<link rel="stylesheet" href="css/shortcutcss-no-color.min.css">
+```
+
+### CDN
+
+A CDN link is also available.
+```html
+<link rel="stylesheet" href="http://cdn.thelaborat.org/shortcutcss/shortcutcss.css">
+<link rel="stylesheet" href="http://cdn.thelaborat.org/shortcutcss/shortcutcss-no-color.css">
+<link rel="stylesheet" href="http://cdn.thelaborat.org/shortcutcss/shortcutcss.min.css">
+<link rel="stylesheet" href="http://cdn.thelaborat.org/shortcutcss/shortcutcss-no-color.min.css">
 ```
 
 Change your HTML from this:	
