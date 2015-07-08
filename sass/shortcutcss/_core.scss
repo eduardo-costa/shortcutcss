@@ -33,15 +33,15 @@ Shortcut classes.
 @for $i from 1 through 200 { $v: ($i*0.02); .fse#{$v*100} { font-size: #{$v}em; } }
 
 @for $i from 0 through 64  { $v: ($i*2); .w#{$v} { width: #{$v}px; } }
-@for $i from 0 through 64  { $v: ($i*2); .h#{$v} { width: #{$v}px; } }
+@for $i from 0 through 64  { $v: ($i*2); .h#{$v} { height: #{$v}px; } }
 @for $i from 0 through 64  { $v: ($i*2); .wh#{$v} { width: #{$v}px; height: #{$v}px; } }
 
 @for $i from 0 through 20  { $v: ($i*5); .w#{$v}p { width: #{$v}%; } }
-@for $i from 0 through 20  { $v: ($i*5); .h#{$v}p { width: #{$v}%; } }
+@for $i from 0 through 20  { $v: ($i*5); .h#{$v}p { height: #{$v}%; } }
 @for $i from 0 through 20  { $v: ($i*5); .wh#{$v}p { width: #{$v}%; height: #{$v}%; } }
 
 @for $i from 0 through 20  { $v: ($i*5); .vw#{$v} { width: #{$v}vw; } }
-@for $i from 0 through 20  { $v: ($i*5); .vh#{$v} { width: #{$v}vh; } }
+@for $i from 0 through 20  { $v: ($i*5); .vh#{$v} { height: #{$v}vh; } }
 @for $i from 0 through 20  { $v: ($i*5); .vwh#{$v} { width: #{$v}vw; height: #{$v}vh; } }
 
 @for $i from 0 through 80  { $v: ($i*0.05); .w#{$v*100}r { width: #{$v}rem; } }
@@ -49,7 +49,7 @@ Shortcut classes.
 @for $i from 0 through 80  { $v: ($i*0.05); .wh#{$v*100}r { width: #{$v}rem; height: #{$v}rem; } }
 
 @for $i from 0 through 80  { $v: ($i*0.05); .w#{$v*100}e { width: #{$v}em; } }
-@for $i from 0 through 80  { $v: ($i*0.05); .h#{$v*100}e { width: #{$v}em; } }
+@for $i from 0 through 80  { $v: ($i*0.05); .h#{$v*100}e { height: #{$v}em; } }
 @for $i from 0 through 80  { $v: ($i*0.05); .wh#{$v*100}e { width: #{$v}em; height: #{$v}em; } }
 
 .visible	{ visibility: visible; }
