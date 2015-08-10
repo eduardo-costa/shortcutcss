@@ -5,6 +5,9 @@ Variables
 ######### Functions #########
 */
 /*
+######### Misc #########
+*/
+/*
 ######### Flexbox #########
 */
 /**
@@ -18,6 +21,26 @@ Shortcut classes.
 
 .fix {
   position: fixed; }
+
+.c-default {
+  cursor: default; }
+
+.c-pointer {
+  cursor: pointer; }
+
+.c-none {
+  cursor: none; }
+
+.mouse-disable {
+  pointer-events: none; }
+
+.select-disable {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
 
 .scroll {
   overflow: auto; }
@@ -4106,6 +4129,15 @@ Shortcut classes.
 .opacity0 {
   opacity: 0.0; }
 
+.opacity025 {
+  opacity: 0.25; }
+
+.opacity05 {
+  opacity: 0.5; }
+
+.opacity075 {
+  opacity: 0.75; }
+
 .opacity1 {
   opacity: 1.0; }
 
@@ -4113,7 +4145,7 @@ Shortcut classes.
   transition: opacity 0.4s ease-out; }
 
 .tw-position {
-  transition: left 0.4s ease-out, right 0.4s ease-out; }
+  transition: left 0.4s ease-out, top 0.4s ease-out, right 0.4s ease-out, bottom 0.4s ease-out; }
 
 .tw-size {
   transition: width 0.4s ease-out, height 0.4s ease-out; }
@@ -4123,6 +4155,21 @@ Shortcut classes.
 
 .tw-shadow {
   transition: box-shadow 0.4s ease-out; }
+
+.tw-border {
+  transition: border 0.4s ease-out; }
+
+.tw-outline {
+  transition: outline 0.4s ease-out; }
+
+.tw-padding {
+  transition: padding 0.4s ease-out; }
+
+.tw-margin {
+  transition: margin 0.4s ease-out; }
+
+.tw-background {
+  transition: background-position 0.4s ease-out, background-size 0.4s ease-out; }
 
 .tw-all {
   transition: all 0.4s ease-out; }
@@ -5059,7 +5106,7 @@ Shortcut classes.
 /**
 Flex Layout
 //*/
-.lh, .hx, .hx2, .hx3, .hx4, .hx5, .vsp, .vsp2, .vsp3, .vsp4 {
+.lh, .lhx, .lhx2, .lhx3, .lhx4, .lhx5, .lvs, .lvs2, .lvs3, .lvs4 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -5082,7 +5129,7 @@ Flex Layout
   -ms-align-content: flex-start;
   align-content: flex-start; }
 
-.lv, .hsp, .hsp2, .hsp3, .hsp4, .vx, .vx2, .vx3, .vx4, .vx5 {
+.lv, .lhs, .lhs2, .lhs3, .lhs4, .lvx, .lvx2, .lvx3, .lvx4, .lvx5 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -5105,35 +5152,35 @@ Flex Layout
   -ms-align-content: flex-start;
   align-content: flex-start; }
 
-.hsp {
+.lhs {
   width: 2px;
   -webkit-flex-shrink: 0;
   -moz-flex-shrink: 0;
   -ms-flex-shrink: 0;
   flex-shrink: 0; }
 
-.hsp2 {
+.lhs2 {
   width: 4px;
   -webkit-flex-shrink: 0;
   -moz-flex-shrink: 0;
   -ms-flex-shrink: 0;
   flex-shrink: 0; }
 
-.hsp3 {
+.lhs3 {
   width: 6px;
   -webkit-flex-shrink: 0;
   -moz-flex-shrink: 0;
   -ms-flex-shrink: 0;
   flex-shrink: 0; }
 
-.hsp4 {
+.lhs4 {
   width: 8px;
   -webkit-flex-shrink: 0;
   -moz-flex-shrink: 0;
   -ms-flex-shrink: 0;
   flex-shrink: 0; }
 
-.hx {
+.lhx {
   -webkit-flex-grow: 1;
   -moz-flex-grow: 1;
   -ms-flex-grow: 1;
@@ -5143,7 +5190,7 @@ Flex Layout
   -ms-flex-shrink: 1;
   flex-shrink: 1; }
 
-.hx2 {
+.lhx2 {
   -webkit-flex-grow: 2;
   -moz-flex-grow: 2;
   -ms-flex-grow: 2;
@@ -5153,7 +5200,7 @@ Flex Layout
   -ms-flex-shrink: 1;
   flex-shrink: 1; }
 
-.hx3 {
+.lhx3 {
   -webkit-flex-grow: 3;
   -moz-flex-grow: 3;
   -ms-flex-grow: 3;
@@ -5163,7 +5210,7 @@ Flex Layout
   -ms-flex-shrink: 1;
   flex-shrink: 1; }
 
-.hx4 {
+.lhx4 {
   -webkit-flex-grow: 4;
   -moz-flex-grow: 4;
   -ms-flex-grow: 4;
@@ -5173,7 +5220,7 @@ Flex Layout
   -ms-flex-shrink: 1;
   flex-shrink: 1; }
 
-.hx5 {
+.lhx5 {
   -webkit-flex-grow: 5;
   -moz-flex-grow: 5;
   -ms-flex-grow: 5;
@@ -5183,7 +5230,7 @@ Flex Layout
   -ms-flex-shrink: 1;
   flex-shrink: 1; }
 
-.vsp {
+.lvs {
   height: 2px;
   min-height: 2px;
   -webkit-flex-shrink: 0;
@@ -5191,7 +5238,7 @@ Flex Layout
   -ms-flex-shrink: 0;
   flex-shrink: 0; }
 
-.vsp2 {
+.lvs2 {
   height: 4px;
   min-height: 4px;
   -webkit-flex-shrink: 0;
@@ -5199,7 +5246,7 @@ Flex Layout
   -ms-flex-shrink: 0;
   flex-shrink: 0; }
 
-.vsp3 {
+.lvs3 {
   height: 6px;
   min-height: 6px;
   -webkit-flex-shrink: 0;
@@ -5207,7 +5254,7 @@ Flex Layout
   -ms-flex-shrink: 0;
   flex-shrink: 0; }
 
-.vsp4 {
+.lvs4 {
   height: 8px;
   min-height: 8px;
   -webkit-flex-shrink: 0;
@@ -5215,7 +5262,7 @@ Flex Layout
   -ms-flex-shrink: 0;
   flex-shrink: 0; }
 
-.vx {
+.lvx {
   -webkit-flex-grow: 1;
   -moz-flex-grow: 1;
   -ms-flex-grow: 1;
@@ -5225,7 +5272,7 @@ Flex Layout
   -ms-flex-shrink: 1;
   flex-shrink: 1; }
 
-.vx2 {
+.lvx2 {
   -webkit-flex-grow: 2;
   -moz-flex-grow: 2;
   -ms-flex-grow: 2;
@@ -5235,7 +5282,7 @@ Flex Layout
   -ms-flex-shrink: 1;
   flex-shrink: 1; }
 
-.vx3 {
+.lvx3 {
   -webkit-flex-grow: 3;
   -moz-flex-grow: 3;
   -ms-flex-grow: 3;
@@ -5245,7 +5292,7 @@ Flex Layout
   -ms-flex-shrink: 1;
   flex-shrink: 1; }
 
-.vx4 {
+.lvx4 {
   -webkit-flex-grow: 4;
   -moz-flex-grow: 4;
   -ms-flex-grow: 4;
@@ -5255,7 +5302,7 @@ Flex Layout
   -ms-flex-shrink: 1;
   flex-shrink: 1; }
 
-.vx5 {
+.lvx5 {
   -webkit-flex-grow: 5;
   -moz-flex-grow: 5;
   -ms-flex-grow: 5;
@@ -5405,6 +5452,24 @@ Flex Layout
   -ms-flex-align: flex-end;
   -webkit-align-items: flex-end;
   align-items: flex-end; }
+
+.l-wrap {
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+
+.l-rwrap {
+  -webkit-flex-wrap: wrap-reverse;
+  -moz-flex-wrap: wrap-reverse;
+  -ms-flex-wrap: wrap-reverse;
+  flex-wrap: wrap-reverse; }
+
+.l-nowrap {
+  -webkit-flex-wrap: nowrap;
+  -moz-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap; }
 
 /**
 Colors

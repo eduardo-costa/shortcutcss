@@ -8,6 +8,13 @@ Shortcut classes.
 .rel { position: relative; }
 .fix { position: fixed; }
 
+.c-default { cursor: default; }
+.c-pointer { cursor: pointer; }
+.c-none    { cursor: none;    }
+
+.mouse-disable { pointer-events: none; }
+
+.select-disable { @include user-select(none); }
 
 .scroll   { overflow:   auto; }
 .scroll-x { overflow-x: auto; overflow-y: hidden; }
@@ -55,17 +62,26 @@ Shortcut classes.
 .visible	{ visibility: visible; }
 .hidden 	{ visibility: hidden; }
 
-.opacity0   { opacity: 0.0; }
-.opacity1   { opacity: 1.0; }
+.opacity0     { opacity: 0.0;  }
+.opacity025   { opacity: 0.25; }
+.opacity05    { opacity: 0.5;  }
+.opacity075   { opacity: 0.75; }
+.opacity1     { opacity: 1.0;  }
 
-$twd: if(variable-exists("tw-duration"),$tw-duration,0.8s);
+$twd: if(variable-exists("tw-duration"),$tw-duration,0.7s);
 
-.tw-opacity   { transition: opacity $twd ease-out; }
-.tw-position  { transition: left $twd ease-out, right $twd ease-out; }
-.tw-size      { transition: width $twd ease-out, height $twd ease-out; }
-.tw-transform { transition: transform $twd ease-out; }
-.tw-shadow    { transition: box-shadow $twd ease-out; }
-.tw-all       { transition: all $twd ease-out; }
+.tw-opacity     { transition: opacity $twd ease-out; }
+.tw-position    { transition: left $twd ease-out, top $twd ease-out, right $twd ease-out, bottom $twd ease-out; }
+.tw-size        { transition: width $twd ease-out, height $twd ease-out; }
+.tw-transform   { transition: transform $twd ease-out; }
+.tw-shadow      { transition: box-shadow $twd ease-out; }
+.tw-border      { transition: border $twd ease-out; }
+.tw-outline     { transition: outline $twd ease-out; }
+.tw-padding     { transition: padding $twd ease-out; }
+.tw-margin      { transition: margin $twd ease-out; }
+.tw-background  { transition: background-position $twd ease-out, background-size $twd ease-out; }
+.tw-all         { transition: all $twd ease-out; }
+
 
 $twd: if(variable-exists("tw-fast"),  $tw-fast,0.25s);  .tw-fast     { transition-duration: $twd !important; }
 $twd: if(variable-exists("tw-normal"),$tw-normal,0.4s); .tw-normal   { transition-duration: $twd !important; }
@@ -118,27 +134,27 @@ Flex Layout
 
 
 
-.hsp  { @include layout-horizontal-space(1.0); }
-.hsp2 { @include layout-horizontal-space(2.0); }
-.hsp3 { @include layout-horizontal-space(3.0); }
-.hsp4 { @include layout-horizontal-space(4.0); }
+.lhs  { @include layout-horizontal-space(1.0); }
+.lhs2 { @include layout-horizontal-space(2.0); }
+.lhs3 { @include layout-horizontal-space(3.0); }
+.lhs4 { @include layout-horizontal-space(4.0); }
 
-.hx  { @include layout-horizontal-expand(1); }
-.hx2 { @include layout-horizontal-expand(2); }
-.hx3 { @include layout-horizontal-expand(3); }
-.hx4 { @include layout-horizontal-expand(4); }
-.hx5 { @include layout-horizontal-expand(5); }
+.lhx  { @include layout-horizontal-expand(1); }
+.lhx2 { @include layout-horizontal-expand(2); }
+.lhx3 { @include layout-horizontal-expand(3); }
+.lhx4 { @include layout-horizontal-expand(4); }
+.lhx5 { @include layout-horizontal-expand(5); }
 
-.vsp  { @include layout-vertical-space(1.0); }
-.vsp2 { @include layout-vertical-space(2.0); }
-.vsp3 { @include layout-vertical-space(3.0); }
-.vsp4 { @include layout-vertical-space(4.0); }
+.lvs  { @include layout-vertical-space(1.0); }
+.lvs2 { @include layout-vertical-space(2.0); }
+.lvs3 { @include layout-vertical-space(3.0); }
+.lvs4 { @include layout-vertical-space(4.0); }
 
-.vx  { @include layout-vertical-expand(1); }
-.vx2 { @include layout-vertical-expand(2); }
-.vx3 { @include layout-vertical-expand(3); }
-.vx4 { @include layout-vertical-expand(4); }
-.vx5 { @include layout-vertical-expand(5); }
+.lvx  { @include layout-vertical-expand(1); }
+.lvx2 { @include layout-vertical-expand(2); }
+.lvx3 { @include layout-vertical-expand(3); }
+.lvx4 { @include layout-vertical-expand(4); }
+.lvx5 { @include layout-vertical-expand(5); }
 
 @for $i from 1 through 10 { .fg#{$i} { @include flex-grow($i); } }
 
@@ -151,3 +167,7 @@ Flex Layout
 .lbl  { @include justify-content(flex-end); 	@include align-items(flex-start); }
 .lbc  { @include justify-content(flex-end); 	@include align-items(center); }
 .lbr  { @include justify-content(flex-end); 	@include align-items(flex-end); }
+
+.l-wrap   { @include flex-wrap(wrap); }
+.l-rwrap  { @include flex-wrap(wrap-reverse); }
+.l-nowrap { @include flex-wrap(nowrap); }

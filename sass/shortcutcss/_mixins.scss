@@ -8,6 +8,20 @@
 }
 
 /*
+######### Misc #########
+*/
+
+@mixin user-select($v) 
+{
+	-webkit-touch-callout: $v;
+    -webkit-user-select: $v;
+    -khtml-user-select: $v;
+    -moz-user-select: $v;
+    -ms-user-select: $v;
+    user-select: $v;
+}
+
+/*
 ######### Flexbox #########
 */
 @mixin flexbox() 
@@ -50,6 +64,14 @@
   -moz-flex-grow:  $values;  
   -ms-flex-grow:  $values;
   flex-grow:  $values;
+}
+
+@mixin flex-wrap($values) 
+{
+  -webkit-flex-wrap: $values;
+  -moz-flex-wrap:  $values;  
+  -ms-flex-wrap:  $values;
+  flex-wrap:  $values;
 }
 
 @mixin order($val) 
